@@ -317,133 +317,98 @@ body {
 
 /* Story Page Layout */
 .story-page {
-  max-width: 1200px;
-  margin: 1rem auto; 
+  max-width: 100%;
+  margin: 1rem auto;
   padding: 0 1rem;
   font-family: 'Potta One', cursive;
 }
 
+/* Responsive Story Layout */
 .story-layout {
   display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  padding: 1rem;
 }
 
+/* Story Info Section */
 .story-info {
   text-align: center;
-  margin-bottom: 2rem;
-  grid-column: 1 / -1;
+  margin-bottom: 1.5rem;
   align-items: center;
 }
 
-.story-logo {
-  width: 120px;
-  height: auto;
+/* Vocabulary List */
+.vocabulary-list {
+  background-color: var(--highlight);
+  padding: 1rem;
+  border-radius: 8px;
+  position: static; /* Remove sticky positioning on mobile */
+  font-family: 'Potta One', cursive;
+}
+
+/* Vocabulary List Title */
+.vocabulary-list h3 {
+  font-size: 1rem;
   margin-bottom: 1rem;
 }
 
-.story-title {
-  color: var(--primary);
-  font-size: 2rem;
-  margin: 0;
-  font-family: 'Potta One', cursive;
+/* Vocab Item */
+.vocab-item {
+  gap: 0.5rem;
+  padding: 0.5rem;
 }
 
-.english {
-  color: var(--primary);
-  font-weight: 500;
+/* Play Icon */
+.play-icon img {
+  width: 20px;
+  height: 20px;
 }
 
-.indonesian {
-  color: #666;
+/* Story Content */
+.story-content {
+  background-color: var(--background);
+  padding: 1rem;
+  border-radius: 8px;
 }
 
-@media screen and (max-width: 768px) {
+/* Story Paragraph */
+.story-paragraph {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (min-width: 600px) {
   .story-layout {
-    grid-template-columns: 1fr; 
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  .story-title {
-    font-size: 1.5rem; 
+    grid-template-columns: 1fr 3fr;
   }
 
   .vocabulary-list {
-    position: static; 
-    margin-bottom: 1rem;
-  }
-
-  .story-content {
-    padding: 1rem;
-  }
-
-  .vocab-item {
-    padding: 0.5rem;
-  }
-
-  .story-paragraph {
-    padding: 0.75rem;
-    margin-bottom: 1rem;
+    position: sticky;
+    top: 100px;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media (min-width: 768px) {
   .story-page {
-    margin: 0.5rem auto;
-    padding: 0 0.5rem;
+    max-width: 1200px;
   }
 
   .story-layout {
-    padding: 0.75rem;
+    padding: 2rem;
   }
 
-  .story-title {
-    font-size: 1.25rem;
+  .story-info {
+    margin-bottom: 2rem;
   }
 
-  .vocab-item {
-    gap: 0.5rem;
+  .vocabulary-list h3 {
+    font-size: 1.2rem;
   }
-
-  .play-icon img {
-    width: 20px;
-    height: 20px;
-  }
-
-  .word {
-    font-size: 0.9rem;
-  }
-
-  .translation {
-    font-size: 0.8rem;
-  }
-}
-
-.vocabulary-list {
-  background-color: var(--highlight);
-  padding: 1.5rem;
-  border-radius: 8px;
-  height: fit-content;
-  position: sticky;
-  top: 100px;
-  font-family: 'Potta One', cursive;
-}
-
-
-/* Audio Button */
-.audio-btn {
-  cursor: pointer;
-  opacity: 0.8;
-  transition: var(--transition);
-}
-
-.audio-btn:hover {
-  opacity: 1;
 }
 
 /* About Page Container */
