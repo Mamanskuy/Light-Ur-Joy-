@@ -318,7 +318,7 @@ body {
 /* Story Page Layout */
 .story-page {
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 1rem auto; 
   padding: 0 1rem;
   font-family: 'Potta One', cursive;
 }
@@ -333,7 +333,6 @@ body {
   padding: 2rem;
 }
 
-/* Story Info Section */
 .story-info {
   text-align: center;
   margin-bottom: 2rem;
@@ -354,7 +353,77 @@ body {
   font-family: 'Potta One', cursive;
 }
 
-/* Vocabulary List */
+.english {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.indonesian {
+  color: #666;
+}
+
+@media screen and (max-width: 768px) {
+  .story-layout {
+    grid-template-columns: 1fr; 
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .story-title {
+    font-size: 1.5rem; 
+  }
+
+  .vocabulary-list {
+    position: static; 
+    margin-bottom: 1rem;
+  }
+
+  .story-content {
+    padding: 1rem;
+  }
+
+  .vocab-item {
+    padding: 0.5rem;
+  }
+
+  .story-paragraph {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .story-page {
+    margin: 0.5rem auto;
+    padding: 0 0.5rem;
+  }
+
+  .story-layout {
+    padding: 0.75rem;
+  }
+
+  .story-title {
+    font-size: 1.25rem;
+  }
+
+  .vocab-item {
+    gap: 0.5rem;
+  }
+
+  .play-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .word {
+    font-size: 0.9rem;
+  }
+
+  .translation {
+    font-size: 0.8rem;
+  }
+}
+
 .vocabulary-list {
   background-color: var(--highlight);
   padding: 1.5rem;
@@ -365,91 +434,6 @@ body {
   font-family: 'Potta One', cursive;
 }
 
-.vocabulary-list h3 {
-  color: var(--primary);
-  margin-bottom: 1.5rem;
-  font-size: 1.2rem;
-  text-align: center;
-}
-
-.vocab-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-  padding: 0.75rem;
-  background-color: white;
-  border-radius: 6px;
-  transition: var(--transition);
-}
-
-.vocab-item:hover {
-  transform: translateX(5px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.play-icon {
-  cursor: pointer;
-}
-
-.play-icon img {
-  width: 24px;
-  height: 24px;
-  transition: var(--transition);
-}
-
-.play-icon:hover img {
-  transform: scale(1.1);
-}
-
-.word-content {
-  flex-grow: 1;
-}
-
-.word {
-  font-weight: 500;
-  color: var(--primary);
-}
-
-.translation {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-/* Story Content */
-.story-content {
-  background-color: var(--background);
-  padding: 2rem;
-  border-radius: 8px;
-  font-family: 'Potta One', cursive;
-}
-
-.story-paragraph {
-  margin-bottom: 2rem;
-  padding: 1rem;
-  background-color: white;
-  border-radius: 8px;
-  transition: var(--transition);
-}
-
-.story-paragraph:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.story-paragraph p {
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
-}
-
-.english {
-  color: var(--primary);
-  font-weight: 500;
-}
-
-.indonesian {
-  color: #666;
-}
 
 /* Audio Button */
 .audio-btn {
